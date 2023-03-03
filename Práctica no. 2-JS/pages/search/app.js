@@ -26,83 +26,84 @@ const menu = new Menu();
 const lista_productos = [
   [
     1,
-    "buttermilk pancakes",
-    "breakfast",
-    15.99,
-    "./images/item-1.jpeg",
-    `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed `
+    "Botín Flexi Para Mujer",
+    "Ropa",
+    "1,249",
+    "https://http2.mlstatic.com/D_NQ_NP_913431-MLM50678435390_072022-O.webp",
+    `Este producto forma parte de nuestra línea de dama semivestir con inspiración western.`
   ],
   [
     2,
-    "diner double",
-    "lunch",
-    13.99,
-    "./images/item-2.jpeg",
-    `vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats `
+    "Laptop Gateway 15.6 4gb",
+    "Tecnologia",
+    "4,829",
+    "https://http2.mlstatic.com/D_NQ_NP_2X_609550-MLM52928026462_122022-F.webp",
+    `La laptop Gateway Notebook Ultra Slim GWNC31514-BK es una solución tanto para trabajar y estudiar como para entretenerte.`
   ],
   [
     3,
-    "godzilla milkshake",
-    "shakes",
-    6.99,
-    "./images/item-3.jpeg",
-    `ombucha chillwave fanny pack 3 wolf moon street art photo booth before they sold out organic viral.`
+    "Sala Económica Esquinera",
+    "Hogar",
+    "5,960",
+    "https://http2.mlstatic.com/D_NQ_NP_2X_964666-MLM53765389390_022023-F.webp",
+    `La mejor opción para tu primera sala fabricada con materiales básicos asequible al bolsillo.`
   ],
   [
     4,
-    "country delight",
-    "breakfast",
-    20.99,
-    "./images/item-4.jpeg",
-    `Shabby chic keffiyeh neutra snackwave pork belly shoreditch. Prism austin mlkshk truffaut, `
+    "Taladro percutor inalámbrico de 10mm 21V",
+    "Herramientas",
+    "681",
+    "https://imgs.search.brave.com/_u1Fj3qWIv8URpCQ2WkKfH1lMcdmRE_tcBDPlli_mew/rs:fit:1200:722:1/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vdGFsYWRyby1w/ZXJjdXRvci1kZXdh/bHQtZGNrMjkwbDIt/aW5hbGFtYnJpY28t/ZGVzdG9ybmlsbGFk/b3ItRF9OUV9OUF84/NzE1MTEtTUNPMjA1/Njg4MjQyODFfMDEy/MDE2LUYuanBn",
+    `Con el taladro eléctrico Teeno 5816-1 podrás realizar múltiples tareas en diversas superficies de un modo práctico y sencillo.`
   ],
   [
     5,
-    "egg attack",
-    "lunch",
-    22.99,
-    "./images/item-5.jpeg",
-    `franzen vegan pabst bicycle rights kickstarter pinterest meditation farm-to-table 90's pop-up `
+    "Burago Redbull F1 Rb18",
+    "Jugetes",
+    "298",
+    "https://http2.mlstatic.com/D_NQ_NP_2X_727341-MLM53555609550_022023-F.webp",
+    `IMPORTANTE ANTES DE COMPRAR: este es un modelo 1:43 solo para colección, los controladores no están incluidos.`
   ],
   [
     6,
-    "oreo dream",
-    "shakes",
-    18.99,
-    "./images/item-6.jpeg",
-    `Portland chicharrones ethical edison bulb, palo santo craft beer chia heirloom iPhone everyday`
+    "Gorra De Béisbol Cómoda",
+    "Ropa",
+    "93",
+    "https://http2.mlstatic.com/D_NQ_NP_2X_816232-MLM50793992209_072022-F.webp",
+    `Nuestro producto adopta un diseño de hebilla ajustable, puede ajustar el tamaño usted mismo, fácil y conveniente de usar. Bienvenido a su compra. Gracias.
+    `
   ],
   [
     7,
-    "bacon overflow",
-    "breakfast",
-    8.99,
-    "./images/item-7.jpeg",
-    `carry jianbing normcore freegan. Viral single-origin coffee live-edge, pork belly cloud bread iceland put a bird `
+    "Tablet Samsung Galaxy Tab A A7",
+    "Tecnologia",
+    "2,899",
+    "https://http2.mlstatic.com/D_NQ_NP_2X_783986-MLA47146625905_082021-F.webp",
+    `Esta tablet Samsung es la compañera ideal, con capacidad de sobra para cada una de tus actividades.`
   ],
   [
     8,
-    "american classic",
-    "lunch",
-    12.99,
-    "./images/item-8.jpeg",
-    `on it tumblr kickstarter thundercats migas everyday carry squid palo santo leggings. Food truck truffaut  `
+    "Estufa empotrable Mabe Diseño XOC80800CT1 ",
+    "Hogar",
+    "15,198",
+    "https://http2.mlstatic.com/D_NQ_NP_2X_609190-MLA45003012503_022021-F.webp",
+    `Mabe cuenta con más de 70 años de trayectoria en el mercado de electrodomésticos, dedicada a brindar a soluciones prácticas para el bienestar de los hogares.`
   ],
   [
     9,
-    "quarantine buddy",
-    "shakes",
-    16.99,
-    "./images/item-9.jpeg",
-    `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`
+    "Smart TV Hisense A4",
+    "Tecnologia",
+    "3,599",
+    "https://http2.mlstatic.com/D_NQ_NP_2X_869347-MLA44226115511_122020-F.webp",
+    `Con el Smart TV 100012589 accederás a las aplicaciones donde se encuentran tus contenidos favoritos`
   ],
   [
     10,
-    "bison steak",
-    "dinner",
-    22.99,
-    "./images/item-10.jpeg",
-    `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`
+    "Sierra Circular Eléctrica Pretul Sici-7-1/4p",
+    "Herramientas",
+    "1138",
+    "https://http2.mlstatic.com/D_NQ_NP_2X_960254-MLM51864843020_102022-F.webp",
+    `La sierra Pretul SICI-7-1/4P es la solución para realizar cortes con precisión y velocidad.`
   ]
 ];
 
