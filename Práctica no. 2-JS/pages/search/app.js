@@ -1,3 +1,4 @@
+//Clase que representa un producto individual
 class Producto{
   constructor(id,title,category,price,img,desc){
     this.id = id;
@@ -9,20 +10,21 @@ class Producto{
   }
 }
 
+// Clase que repersenta el menu, es decir almacena una lista de productos
 class Menu {
   constructor(){
     this.productos = [];
   }
-
+  // Metodo usado para añadir un producto al final de la lista de productos
   add_producto(producto){
     this.productos.push(producto);
   }
 }
 
-
+// Instancia de la calse Menu
 const menu = new Menu();
 
-
+// Datos para llenar los campos de los productos
 const lista_productos = [
   [
     1,
@@ -107,6 +109,7 @@ const lista_productos = [
   ]
 ];
 
+// Crea una instancia de Producto por cada uno de los productos de la lista y llena los campos por cada producto
 for (let i = 0; i < lista_productos.length; i++){
   menu.add_producto(new Producto(lista_productos[i][0],lista_productos[i][1],lista_productos[i][2],lista_productos[i][3],lista_productos[i][4],lista_productos[i][5]));
 }
@@ -124,8 +127,11 @@ window.addEventListener("DOMContentLoaded", function () {
   display_buttons();
 });
 
+// Muestra los elementos del menu pasado por un objeto de la clase Menu
 function display_menu(menu){
+  // Cadena que sera insertada en el html
   let html_menu = '';
+  // Recorre cada uno de los items de menu y concatena cada estructura para formar un item en el menu
   for (let i = 0; i < menu.productos.length; i++){
     html_menu = html_menu + `<article class="menu-item">
       <img src=${menu.productos[i].img} alt=${menu.productos[i].title} class="photo" />
@@ -140,19 +146,24 @@ function display_menu(menu){
       </div>
     </article>`;
   }
+  // Inserta todos los elementos en el archivo html
   sectionCenter.innerHTML = html_menu;
-
 }
 
-
+// Muestra los botones por cada categoria y realiza el filtrado por categoria
 function display_buttons(){
+  // Arreglo con todas las categorias ingresadas
   var categorias = ["all"];
+  // Recorre todos los productos del menu y si encuentra uno que aun no este en categorias lo añade
   for (let i = 0; i < menu.productos.length; i++){
     if (categorias.indexOf(menu.productos[i].category)  == -1){
       categorias.push(menu.productos[i].category);
     }
   }
+
+  // Cadena usada para insertar al cuerpo del html los botones
   html_buttons = '';
+  // Recorre las categorias obtenidas anteriormente y crea un bonton por cada una relacionando su data-id con su categoria
   for (let i = 0; i < categorias.length; i++){
     html_buttons = html_buttons + `
     <button type="button" class="filter-btn" data-id=${categorias[i]}>
@@ -160,22 +171,29 @@ function display_buttons(){
     </button>
       `; 
   }
+  // Inserta todos los botones al html
   btnContainer.innerHTML = html_buttons;
 
+  // Obtiene todos los botones
   const filterBtns = btnContainer.querySelectorAll(".filter-btn");
+  
+  // Por cada boton añade el evento listener
   filterBtns.forEach(function (btn) {
     btn.addEventListener("click", function (e) {
-      // console.log(e.currentTarget.dataset);
+      // Obtiene el data-id de cada boton
       const category = e.currentTarget.dataset.id;
+      // Creacion de un submenu para almacenar los elementos filtrados
       const menuCategory = new Menu();
+      // Filtra todos los elementos del menu principal buscando la clase por cada boton, de encontrar alguno lo añade al nuevo menu
       menuCategory.productos =  menu.productos.filter(function (menuItem) {
-        // console.log(menuItem.category);
         if (menuItem.category === category) {
           return menuItem;
         }
       });
+      // Si la categoria es all entonces muestra lo elementos en el menu principal
       if (category === "all") {
         display_menu(menu);
+      // De lo contrario muestra los elementos encontrados por categoria y alamcenados en el submenu
       } else {
         display_menu(menuCategory);
       }
