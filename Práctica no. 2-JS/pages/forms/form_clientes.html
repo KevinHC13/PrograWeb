@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Registro de Categoría de productos</title>
+  <title>Registro de clientes</title>
 
     <!--------------------------------------------------->
 
   <!-- Abrir archivo JS -->
   <!---->
-  <script src="js/app_categoria.js"></script>
+  <script src="js/app_clientes.js"></script>
 
 
 
@@ -107,7 +107,7 @@
                     
                     
                     <li class="nav-item">
-                      <a href="#" class="nav-link">
+                      <a href="#" class="nav-link active">
                         <i class="nav-icon fas fa-edit"></i>
                         <p>
                           Registros
@@ -124,7 +124,7 @@
                         </li>
 
                     <li class="nav-item">
-                      <a href="form_clientes.html" class="nav-link">
+                      <a href="form_clientes.html" class="nav-link active">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Registro de clientes</p>
                       </a>
@@ -148,7 +148,7 @@
                     </li>
 
                     <li class="nav-item">
-                      <a href="#" class="nav-link active">
+                      <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-edit"></i>
                         <p>
                           Categorias
@@ -158,7 +158,7 @@
                       <ul class="nav nav-treeview">
 
                     <li class="nav-item">
-                      <a href="form_categorias.html" class="nav-link active">
+                      <a href="form_categorias.html" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>
                           Registro de Categoria de productos
@@ -167,7 +167,7 @@
                     </li>
 
                     <li class="nav-item">
-                      <a href="form_categorias_clientes.html" class="nav-link ">
+                      <a href="form_categorias_clientes.html" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>
                           Registro de Categoria de clientes
@@ -255,12 +255,12 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0">Categorias</h1>
+              <h1 class="m-0">Clientes</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="../../dasboard.html">Home</a></li>
-                <li class="breadcrumb-item active">Categorias</li>
+                <li class="breadcrumb-item active">Clientes</li>
               </ol>
             </div><!-- /.col -->
           </div><!-- /.row -->
@@ -280,7 +280,7 @@
             <!-- general form elements disabled -->
             <div class="card card-warning" style="width: 100%;">
               <div class="card-header">
-                <h3 class="card-title">Registro de Categoría de productos</h3>
+                <h3 class="card-title">Registro de clientes</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -290,13 +290,49 @@
                       <!-- text input -->
                       <div class="form-group">
                         <!--Usuario-->
-                        <label for="clave">Ingresa la clave:(*)</label>
-                        <input type="text" class="form-control" id="clave" name="clave" placeholder="Proporciona la calve">
+                        <label for="id">Ingresa la id:(*)</label>
+                        <input type="text" class="form-control" id="id" name="id" placeholder="Proporciona el id">
 
                         <!--Nombre-->
-                        <label for="nombre">Ingresa el nombre:(*)</label>
-                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Proporciona nombre">
-                    </div>
+                        <label for="nombre">Ingresa el nombre(s):(*)</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Proporciona el nombre">
+
+                        <!--Apellido paterno-->
+                        <label for="a_paterno">Ingresa el apellido paterno:(*)</label>
+                        <input type="text" class="form-control" id="a_paterno" name="a_paterno" placeholder="Proporciona el apellido paterno">
+                        
+                        <!--Apellido materno-->
+                        <label for="a_materno">Ingresa el apellido materno:(*)</label>
+                        <input type="text" class="form-control" id="a_materno" name="a_materno" placeholder="Proporciona el apellido materno">
+                        
+                        <!--email-->
+                        <label for="email">Ingresa el email:(*)</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Proporciona el email">
+
+                        <!--telefono-->
+                        <label for="telefono">Ingresa el teléfono:(*)</label>
+                        <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Proporciona el teléfono">
+
+                        <!--direccion-->
+                        <label for="direccion">Ingresa el dirección:(*)</label>
+                        <input type="address-line1" class="form-control" id="direccion" name="direccion" placeholder="Proporciona el dirección">
+
+                        <!--rfc-->
+                        <label for="rfc">Ingresa el RFC:(*)</label>
+                        <input type="text" class="form-control" id="rfc" name="rfc" placeholder="Proporciona el RFC">
+                        
+                        <!--Categoria-->
+                        <div class="form-group">
+                          <label>Categoria</label>
+                          <select id="categoria" class="form-control">
+                            <option>Hogar</option>
+                            <option>Tecnologia</option>
+                            <option>Ropa</option>
+                            <option>Zapatos</option>
+                            <option>Limpieza</option>
+                          </select>
+                          </div>
+                      </div>
                     
                     <div class="row">
                       <div class="col-sm-6">
@@ -313,7 +349,7 @@
                     </div>
 
                   <div class="card-footer">
-                    <button type="button" name= "boton" class="btn btn-primary" onClick="Subir_categoria()">Imprimir</button>
+                    <button type="button" name= "boton" class="btn btn-primary" onClick="Subir_cliente()">Imprimir</button>
 
                     <button type="reset" name= "botonR" class="btn btn-primary">Cancelar</button>
                     <button  style="display: none;" type="button" class="btn btn-danger" id="Modal-Danger2" data-toggle="modal" data-target="#modal-danger">Launch Danger Modal</button>

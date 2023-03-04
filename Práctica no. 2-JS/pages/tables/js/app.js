@@ -78,7 +78,7 @@ function productos(){
   var table = document.querySelector("table");
 
   // String para insertar en el cuerpo del html
-  var contet = ''
+  var contet = '<tr><th>Clave</th><th>Nombre</th><th>Categoria</th><th>Precio</th><th>Descripcion</th></tr>'
 
   // Recorre todos los productos
   for (var i = 0; i < productos.length; i++){
