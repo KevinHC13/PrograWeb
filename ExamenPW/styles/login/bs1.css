@@ -1,0 +1,15 @@
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu__button{
+    width: 30%;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    padding: 3rem;
+    background-color: #684BDB;
+    text-decoration:none;
+    margin: 2rem;
+}
+

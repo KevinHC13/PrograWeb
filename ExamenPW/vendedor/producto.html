@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="styles/login/login.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>Productos</title>
+</head>
+<body>
+
+    <section class="content">
+        <div class="container-fluid">
+          <div class="row">
+              <!--=====================================================================-->
+              <!-- general form elements disabled -->
+              <div class="card card-warning" style="width: 100%;">
+                <div class="card-header">
+                  <h3 class="card-title">Registro de productos</h3>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                  <form id="form-1">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <!-- text input -->
+                        <div class="form-group">
+                          <!--Usuario-->
+                          <label for="codigo">Ingresa el código:(*)</label>
+                          <input type="text" class="form-control" id="codigo" name="codigo" placeholder="Proporciona el código">
+  
+                          <!--Nombre-->
+                          <label for="nombre">Ingresa el nombre del producto:(*)</label>
+                          <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Proporciona el nombre">
+  
+                          <!--Email-->
+                          <label for="descripcion">Ingresa la descripcion:(*)</label>
+                          <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Proporciona una descripcion">
+  
+                          <!--Contraseña-->
+                          <label for="precio">Ingresa el precio:(*)</label>
+                          <input type="text" class="form-control" id="precio" name="precio" placeholder="Proporciona el precio del producto">
+
+                          <!--Contraseña-->
+                          <label for="f_captura">Ingresa la fecha de captura:(*)</label>
+                          <input type="text" class="form-control" id="f_captura" name="f_captura" placeholder="Proporciona la fecha de captura">
+                            
+
+                          <!--Contraseña-->
+                          <label for="nota">Añada alguna nota:(*)</label>
+                          <input type="text" class="form-control" id="nota" name="nota" placeholder="Proporciona alguna nota del producto">
+                        </div>
+                      </div>
+  
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <!-- checkbox -->
+                        <div class="form-group">
+                          <div class="form-check">
+                            
+  
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+  
+                    <div class="card-footer">
+                      <button type="button" name= "boton" class="btn btn-primary" onClick="Subir_productos()">Imprimir</button>
+  
+                      <button type="reset" name= "botonR" class="btn btn-primary">Cancelar</button>
+                      <button  style="display: none;" type="button" class="btn btn-danger" id="Modal-Danger2" data-toggle="modal" data-target="#modal-danger">Launch Danger Modal</button>
+  
+                    </div>
+                  
+                  </form>
+                </div>
+                <!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+              </div>
+              </div>
+    </section>
+  
+              <!--========================================================================== -->
+  
+              <div class="modal fade" id="modal-danger">
+                <div class="modal-dialog"><div class="modal-content bg-danger">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Error</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p id="modal__mensaje" >&hellip;</p>
+                  </div>
+                  <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+                <!-- /.modal-content -->
+              </div>
+              <!-- /.modal-dialog -->
+              </div>
+              <!-- /.modal -->
+    
+    <script src="app.js"></script>
+</body>
+</html>

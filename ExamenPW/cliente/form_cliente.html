@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos</title>
+</head>
+<body>
+    <section class="content">
+        <div class="container-fluid">
+          <div class="row">
+              <!--=====================================================================-->
+              <!-- general form elements disabled -->
+              <div class="card card-warning" style="width: 100%;">
+                <div class="card-header">
+                  <h3 class="card-title">Registro de clientes</h3>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                  <form id="form-1">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <!-- text input -->
+                        <div class="form-group">
+                          <!--Usuario-->
+                          <label for="img">Ingresa la imagen:(*)</label>
+                          <input type="text" class="form-control" id="img" name="img" placeholder="Proporciona la imagen">
+  
+                          <!--Nombre-->
+                          <label for="nombre">Ingresa el nombre(s):(*)</label>
+                          <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Proporciona el nombre">
+  
+                          <!--Apellido paterno-->
+                          <label for="descripcion">Ingresa la descripcion:(*)</label>
+                          <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Proporciona la descripcion">
+
+                          
+                          <!--Apellido materno-->
+                          <label for="precio">Ingresa el precio:(*)</label>
+                          <input type="text" class="form-control" id="precio" name="precio" placeholder="Proporciona el precio">
+                          
+                          <!--email-->
+                          <label for="fecha">Ingresa de entrega:(*)</label>
+                          <input type="email" class="form-control" id="fecha" name="fecha" placeholder="Proporciona una fecha">
+
+                      
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <!-- checkbox -->
+                          <div class="form-group">
+                            <div class="form-check">
+                              
+    
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                      </div>
+  
+                    <div class="card-footer">
+                      <button type="button" name= "boton" class="btn btn-primary" onClick="Subir_cliente()">Imprimir</button>
+  
+                      <button type="reset" name= "botonR" class="btn btn-primary">Cancelar</button>
+                      <button  style="display: none;" type="button" class="btn btn-danger" id="Modal-Danger2" data-toggle="modal" data-target="#modal-danger">Launch Danger Modal</button>
+  
+                    </div>
+                  
+                  </form>
+                </div>
+                <!-- /.card-body -->
+              </div>
+        </div>
+        </div>
+    </section>
+
+
+    <div class="modal fade" id="modal-danger">
+      <div class="modal-dialog"><div class="modal-content bg-danger">
+        <div class="modal-header">
+          <h4 class="modal-title">Error</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p id="modal__mensaje" >&hellip;</p>
+        </div>
+        <div class="modal-footer justify-content-between">
+          <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    <script src="app.js"></script>
+</body>
+</html>

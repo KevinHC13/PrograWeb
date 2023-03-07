@@ -1,0 +1,30 @@
+.page{
+    background-color: #9846F2;
+}
+
+.login{
+    margin-top: 5rem;
+    display: flex;
+    width: auto;
+    
+    justify-content: space-around;
+    align-items: center;
+    
+
+}
+
+.login__card{
+    width: 30%;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    padding: 3rem;
+    background-color: #684BDB;
+}
+
+.login__campos{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+}
