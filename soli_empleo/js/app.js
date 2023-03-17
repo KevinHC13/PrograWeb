@@ -1,13 +1,14 @@
 function generarForm() {
-    // Obtener los datos del formulario
+    // Obtener los datos del formulario y elementos para el bloqueo de los campos
     const forms = document.querySelectorAll('.needs-validation');
-    const loaderOverlay = document.getElementById("loader-overlay");    //Inicialización de alertas 
-    
     const formulario = document.getElementById('formulario');
     const inputs = formulario.querySelectorAll('input');
-
     const selects = formulario.querySelectorAll('select');
-
+    // Obtencion del elemento loaderOverlay
+    const loaderOverlay = document.getElementById("loader-overlay");     
+    
+    
+    // Inicializacion de alertas
     var Toast = Swal.mixin({
         toast: true,
         position: 'top-end',
@@ -19,7 +20,7 @@ function generarForm() {
     Array.from(forms).forEach(form => {
         form.addEventListener('submit', event => {
         
-        
+        // Deteccion de campos vacios
           if (!form.checkValidity()) {
             event.preventDefault()
             event.stopPropagation()
@@ -29,37 +30,44 @@ function generarForm() {
             })
         
           }else{
+            // Si los campos son correctos
+            // Se genera la animacion
             event.preventDefault()
             loaderOverlay.classList.remove("d-none");
             
+            // Bloqueo de los campos input y select
             for (let i = 0; i < inputs.length; i++) {
                 inputs[i].setAttribute('readonly', true);
             }
-
             for (let i = 0; i < selects.length; i++) {
                 selects[i].setAttribute('disabled', "disabled");
             }
 
+            // Al pasar 3 seg. se quita la animacion de carga
             setTimeout(function() {
               loaderOverlay.classList.add("d-none");
             }, 3000);
 
-            
+            // Activa visualizacion del boton para descarga del Json
             const loaderJS = document.getElementById("btnJson");
             loaderJS.style.display = "inline-block";
 
+            // Desactiva la visualizacion del boton para enviar los datos
             const loaderBtn = document.getElementById("loader-btn");
             loaderBtn.style.display = "none";
 
             }
+        // Marca los campos como validados
         form.classList.add('was-validated')
         }, false)
     })
 }   
 
+// Funcion utilizada para descargar el archivo JSON
 function downloadJSON(){
-    console.log("Descargando JSON");
+    // Obteniendo el formulario completo
     const form = document.forms['formulario'];
+    // Leyendo los datos del formulario
     let values = [form["puesto_solicitado"].value,
     form["fecha"].value,form["nombre"].value,
     form["apellido_p"].value,form["apellido_m"].value, 
@@ -116,7 +124,7 @@ function downloadJSON(){
     };
 
     // Convertir objeto a JSON
-    var jsonData = JSON.stringify(formData);
+    var jsonData = JSON.stringify(formData,null,2);
 
     // Crear elemento <a> para descargar el archivo
     var downloadLink = document.createElement("a");
@@ -127,7 +135,7 @@ function downloadJSON(){
     downloadLink.click();
 }
 
-
+// Funcion utilizada para recargar la pagina en caso de que el usuario quiera cancelar el registro
 function cancelar(){
     location.href='empleo.html'
 }
