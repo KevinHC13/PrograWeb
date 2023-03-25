@@ -10,7 +10,7 @@
     <center>
         <?php
         // Conexion a la base de datos
-        $con=mysqli_connect("localhost","root","root", "practicasPrograWeb");
+        $con=mysqli_connect("46.101.138.65","root","NoZo161018K", "practicasPrograWeb");
 
         //Revisar conexion
         if($con == false){
@@ -22,8 +22,6 @@
         $nombre=$_REQUEST['nombre'];
         $precio_venta=$_REQUEST['precio_venta'];
         $precio_compra=$_REQUEST['precio_compra'];
-        //$email=$_REQUEST['email'];
-        var_dump($codigo);
 
         // Ejecutar el Query de insercion de datos
         $sql = "INSERT INTO practica5 VALUES ('$codigo','$nombre','$precio_venta','$precio_compra')";
